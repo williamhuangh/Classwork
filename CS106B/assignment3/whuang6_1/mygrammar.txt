@@ -1,0 +1,5 @@
+duh::=nice|stupid|jack
+ionon::=asdf|ewion|dkdm|ewiew
+iasp::=ewiuwe|ewgjibwe|sdakjlasd|sdfkj
+asd::=ewio|cjdkr|ewuncs
+qwerty::=asd|iasp|iasp asd|duh ionon duh ionon
