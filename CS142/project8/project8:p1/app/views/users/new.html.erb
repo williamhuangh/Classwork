@@ -1,0 +1,23 @@
+<% content_for :head do%>
+  <title>Registration Page</title>
+  <%= stylesheet_link_tag "application" %>
+<% end %>
+
+<% if @user.errors.any? %>
+  <% @user.errors.full_messages.each do |msg| %>
+      <p class = "errors"><%= msg %></p>
+    <% end %>
+<% end %>
+<%= form_for(@user) do |form| %>
+  <p>First Name:</p>
+  <p><%= form.text_field :first_name %></p>
+  <p>Last Name:</p>
+  <p><%= form.text_field :last_name %></p>
+  <p>Username:</p>
+  <p><%= form.text_field :login %></p>
+  <p>Password:</p>
+  <p><%= form.text_field :password %></p>
+  <p>Password Confirmation:</p>
+  <p><%= form.text_field :password_confirmation %></p>
+  <p><%= form.submit %></p>
+<% end %>

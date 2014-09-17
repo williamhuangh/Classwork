@@ -1,0 +1,21 @@
+<% content_for :head do %>
+  <%= stylesheet_link_tag "tags" %>
+  <%= javascript_include_tag "Tagger" %>
+  <title><%= @photo.user.first_name %>'s Photo Add Tags</title>
+<% end %>
+<% if flash[:notice] %>
+	<p><%= flash[:notice] %></p>
+<% end %>
+<p><%= link_to "Back to Photos", user_path(@photo.user) %></p>
+<div id = "i1"><%= image_tag(@photo.file_name) %><div id = "d1"></div></div>
+<%= form_for [@photo, @tag] do |f| %>
+	<%= f.hidden_field :x_value %>
+	<%= f.hidden_field :y_value %>
+	<%= f.hidden_field :width %>
+	<%= f.hidden_field :height %>
+	<%= f.select :user_id, options_for_select(@usernames) %>
+	<%= f.submit %>
+<% end %>
+<script type="text/javascript">
+	new Tagger("i1", "d1", "tag_x_value", "tag_y_value", "tag_width", "tag_height");
+</script>

@@ -1,0 +1,19 @@
+<table cellspacing="0">
+  <tr>
+    <td><div class="beginningSpace"></div></td>
+    <% tabs.each do |tab| %>
+      <% if str == tab[:label] %>
+        <td class="leftSelected"><div></div></td>
+        <td class="selected"><a href= "<%= tab[:url] %>" ><%= tab[:label] %></a></td>
+        <td class="rightSelected"><div></div></td>
+        <td><div class="blank"></div></td>
+      <% else %>
+        <td class="leftUnselected"><div></div></td>
+        <td class="unselected"><a href= "<%= tab[:url] %>" ><%= tab[:label] %></a></td>
+        <td class="rightUnselected"><div></div></td>
+        <td><div class="blank"></div></td>
+      <% end %>
+    <% end %>
+    <td class="restOfPage"><div></div></td>
+  </tr>
+</table>

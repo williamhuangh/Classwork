@@ -1,0 +1,6 @@
+
+<%= form_for(@photo) do |form| %>
+  <p>File Upload</p>
+  <p><%= form.file_field(:uploadedPhoto) %></p>
+  <p><%= form.submit %></p>
+<% end %>

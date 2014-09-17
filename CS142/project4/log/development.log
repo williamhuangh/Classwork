@@ -1,0 +1,273 @@
+
+
+Started GET "/users" for 127.0.0.1 at 2014-05-01 19:55:11 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+DEPRECATION WARNING: Calling #find(:all) is deprecated. Please call #all directly instead. (called from index at /Users/William/CS142/project4/app/controllers/users_controller.rb:3)
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from index at /Users/William/CS142/project4/app/controllers/users_controller.rb:3)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (17.7ms)
+  [1m[36mActiveRecord::SessionStore::Session Load (0.2ms)[0m  [1mSELECT "sessions".* FROM "sessions" WHERE "sessions"."session_id" = '3fad375c1d3139205b281c0f9750d4a1' ORDER BY "sessions"."id" ASC LIMIT 1[0m
+Completed 200 OK in 59ms (Views: 46.0ms | ActiveRecord: 0.9ms)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (3.4ms)[0m  [1mINSERT INTO "sessions" ("created_at", "data", "session_id", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Fri, 02 May 2014 02:55:11 UTC +00:00], ["data", "BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFxR2dMaTZlcDNLOHBTbUMvZVRh\nMjRaTHZ6d00vbDB1dUJyZDhVVFRrZkdrPQY7AEY=\n"], ["session_id", "ab91def7cdb508259efea81f6f6d6a7a"], ["updated_at", Fri, 02 May 2014 02:55:11 UTC +00:00]]
+  [1m[35m (0.8ms)[0m  commit transaction
+
+
+Started GET "/assets/fancyTitle.png" for 127.0.0.1 at 2014-05-01 19:55:11 -0700
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-05-01 19:55:11 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-01 19:55:11 -0700
+
+
+Started GET "/assets/back.jpg" for 127.0.0.1 at 2014-05-01 19:55:11 -0700
+
+
+Started GET "/assets/back2.jpg" for 127.0.0.1 at 2014-05-01 19:55:12 -0700
+
+
+Started GET "/users/4" for 127.0.0.1 at 2014-05-01 19:55:15 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "4"]]
+  [1m[35mPhoto Load (0.3ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."user_id" = ?  [["user_id", 4]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."photo_id" = ?[0m  [["photo_id", 6]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."photo_id" = ?  [["photo_id", 7]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 4]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."photo_id" = ?[0m  [["photo_id", 8]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 4]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."photo_id" = ?[0m  [["photo_id", 12]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 4]]
+  Rendered users/show.html.erb within layouts/application (56.8ms)
+  [1m[36mActiveRecord::SessionStore::Session Load (0.1ms)[0m  [1mSELECT "sessions".* FROM "sessions" WHERE "sessions"."session_id" = 'ab91def7cdb508259efea81f6f6d6a7a' ORDER BY "sessions"."id" ASC LIMIT 1[0m
+Completed 200 OK in 78ms (Views: 59.1ms | ActiveRecord: 2.3ms)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-01 19:55:15 -0700
+
+
+Started GET "/assets/obama2.jpg" for 127.0.0.1 at 2014-05-01 19:55:15 -0700
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-05-01 19:55:15 -0700
+
+
+Started GET "/assets/obama1.jpg" for 127.0.0.1 at 2014-05-01 19:55:15 -0700
+
+
+Started GET "/assets/obama4.jpg" for 127.0.0.1 at 2014-05-01 19:55:15 -0700
+
+
+Started GET "/assets/obama3.jpg" for 127.0.0.1 at 2014-05-01 19:55:15 -0700
+
+
+Started GET "/assets/fancyTitle.png" for 127.0.0.1 at 2014-05-01 19:55:15 -0700
+
+
+Started GET "/assets/back.jpg" for 127.0.0.1 at 2014-05-01 19:55:15 -0700
+
+
+Started GET "/users/4" for 127.0.0.1 at 2014-05-01 19:55:17 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "4"]]
+  [1m[36mPhoto Load (0.1ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."user_id" = ?[0m  [["user_id", 4]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."photo_id" = ?  [["photo_id", 6]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."photo_id" = ?[0m  [["photo_id", 7]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 4]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."photo_id" = ?  [["photo_id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 4]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."photo_id" = ?  [["photo_id", 12]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 4]]
+  Rendered users/show.html.erb within layouts/application (6.0ms)
+  [1m[35mActiveRecord::SessionStore::Session Load (0.2ms)[0m  SELECT "sessions".* FROM "sessions" WHERE "sessions"."session_id" = 'ab91def7cdb508259efea81f6f6d6a7a' ORDER BY "sessions"."id" ASC LIMIT 1
+Completed 200 OK in 12ms (Views: 9.5ms | ActiveRecord: 0.9ms)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+
+
+Started GET "/assets/obama2.jpg" for 127.0.0.1 at 2014-05-01 19:55:17 -0700
+
+
+Started GET "/assets/fancyTitle.png" for 127.0.0.1 at 2014-05-01 19:55:17 -0700
+
+
+Started GET "/assets/obama3.jpg" for 127.0.0.1 at 2014-05-01 19:55:17 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-01 19:55:17 -0700
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-05-01 19:55:17 -0700
+
+
+Started GET "/assets/obama1.jpg" for 127.0.0.1 at 2014-05-01 19:55:17 -0700
+
+
+Started GET "/assets/obama4.jpg" for 127.0.0.1 at 2014-05-01 19:55:17 -0700
+
+
+Started GET "/assets/back.jpg" for 127.0.0.1 at 2014-05-01 19:55:17 -0700
+
+
+Started GET "/users" for 127.0.0.1 at 2014-05-02 20:13:26 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+DEPRECATION WARNING: Calling #find(:all) is deprecated. Please call #all directly instead. (called from index at /Users/William/CS142/project4/app/controllers/users_controller.rb:3)
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from index at /Users/William/CS142/project4/app/controllers/users_controller.rb:3)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (5.2ms)
+  [1m[36mActiveRecord::SessionStore::Session Load (0.2ms)[0m  [1mSELECT "sessions".* FROM "sessions" WHERE "sessions"."session_id" = 'ab91def7cdb508259efea81f6f6d6a7a' ORDER BY "sessions"."id" ASC LIMIT 1[0m
+Completed 200 OK in 45ms (Views: 28.9ms | ActiveRecord: 1.0ms)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-05-02 20:13:26 -0700
+
+
+Started GET "/assets/fancyTitle.png" for 127.0.0.1 at 2014-05-02 20:13:26 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-02 20:13:26 -0700
+
+
+Started GET "/assets/back.jpg" for 127.0.0.1 at 2014-05-02 20:13:26 -0700
+
+
+Started GET "/assets/back2.jpg" for 127.0.0.1 at 2014-05-02 20:13:27 -0700
+
+
+Started GET "/users/4" for 127.0.0.1 at 2014-05-02 20:13:29 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "4"]]
+  [1m[36mPhoto Load (1.8ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."user_id" = ?[0m  [["user_id", 4]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."photo_id" = ?  [["photo_id", 6]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."photo_id" = ?[0m  [["photo_id", 7]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 4]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."photo_id" = ?  [["photo_id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 4]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."photo_id" = ?  [["photo_id", 12]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 4]]
+  Rendered users/show.html.erb within layouts/application (39.7ms)
+  [1m[35mActiveRecord::SessionStore::Session Load (0.1ms)[0m  SELECT "sessions".* FROM "sessions" WHERE "sessions"."session_id" = 'ab91def7cdb508259efea81f6f6d6a7a' ORDER BY "sessions"."id" ASC LIMIT 1
+Completed 200 OK in 63ms (Views: 39.8ms | ActiveRecord: 3.5ms)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-05-02 20:13:29 -0700
+
+
+Started GET "/assets/obama1.jpg" for 127.0.0.1 at 2014-05-02 20:13:29 -0700
+
+
+Started GET "/assets/obama3.jpg" for 127.0.0.1 at 2014-05-02 20:13:29 -0700
+
+
+Started GET "/assets/obama2.jpg" for 127.0.0.1 at 2014-05-02 20:13:29 -0700
+
+
+Started GET "/assets/fancyTitle.png" for 127.0.0.1 at 2014-05-02 20:13:29 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-02 20:13:29 -0700
+
+
+Started GET "/assets/obama4.jpg" for 127.0.0.1 at 2014-05-02 20:13:29 -0700
+
+
+Started GET "/assets/back.jpg" for 127.0.0.1 at 2014-05-02 20:13:29 -0700
+
+
+Started GET "/assets/back2.jpg" for 127.0.0.1 at 2014-05-02 20:13:48 -0700
+
+
+Started GET "/users" for 127.0.0.1 at 2014-05-13 21:51:25 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+DEPRECATION WARNING: Calling #find(:all) is deprecated. Please call #all directly instead. (called from index at /Users/William/CS142/project4/app/controllers/users_controller.rb:3)
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from index at /Users/William/CS142/project4/app/controllers/users_controller.rb:3)
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (11.3ms)
+  [1m[36mActiveRecord::SessionStore::Session Load (0.4ms)[0m  [1mSELECT "sessions".* FROM "sessions" WHERE "sessions"."session_id" = '457736b32e41ee0937ac11043f45aeae' ORDER BY "sessions"."id" ASC LIMIT 1[0m
+Completed 200 OK in 149ms (Views: 129.0ms | ActiveRecord: 1.5ms)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (6.1ms)[0m  [1mINSERT INTO "sessions" ("created_at", "data", "session_id", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Wed, 14 May 2014 04:51:25 UTC +00:00], ["data", "BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFNUWd6anMwaThiUnh3Wi81b1Rq\naXdTeTl0ZFczY0I5WWd5TFB0V1hUMXVNPQY7AEY=\n"], ["session_id", "f68c3e5f758868de46caa90176c03b1e"], ["updated_at", Wed, 14 May 2014 04:51:25 UTC +00:00]]
+  [1m[35m (0.5ms)[0m  commit transaction
+
+
+Started GET "/assets/fancyTitle.png" for 127.0.0.1 at 2014-05-13 21:51:25 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-13 21:51:25 -0700
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-05-13 21:51:25 -0700
+
+
+Started GET "/assets/back.jpg" for 127.0.0.1 at 2014-05-13 21:51:25 -0700
+
+
+Started GET "/assets/back2.jpg" for 127.0.0.1 at 2014-05-13 21:51:26 -0700
+
+
+Started GET "/users/1" for 127.0.0.1 at 2014-05-13 21:51:27 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mPhoto Load (0.4ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."user_id" = ?  [["user_id", 1]]
+  [1m[36mComment Load (0.4ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."photo_id" = ?[0m  [["photo_id", 2]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."photo_id" = ?[0m  [["photo_id", 3]]
+  Rendered users/show.html.erb within layouts/application (60.2ms)
+  [1m[35mActiveRecord::SessionStore::Session Load (0.2ms)[0m  SELECT "sessions".* FROM "sessions" WHERE "sessions"."session_id" = 'f68c3e5f758868de46caa90176c03b1e' ORDER BY "sessions"."id" ASC LIMIT 1
+Completed 200 OK in 97ms (Views: 66.8ms | ActiveRecord: 2.3ms)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+
+
+Started GET "/assets/back.jpg" for 127.0.0.1 at 2014-05-13 21:51:27 -0700
+
+
+Started GET "/assets/bieber2.jpg" for 127.0.0.1 at 2014-05-13 21:51:27 -0700
+
+
+Started GET "/assets/bieber1.jpg" for 127.0.0.1 at 2014-05-13 21:51:27 -0700
+
+
+Started GET "/assets/fancyTitle.png" for 127.0.0.1 at 2014-05-13 21:51:27 -0700
+
+
+Started GET "/assets/back2.jpg" for 127.0.0.1 at 2014-05-13 21:51:29 -0700
+
+
+Started GET "/assets/back2.jpg" for 127.0.0.1 at 2014-05-13 21:51:32 -0700
+
+
+Started GET "/users" for 127.0.0.1 at 2014-05-13 21:51:53 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+DEPRECATION WARNING: Calling #find(:all) is deprecated. Please call #all directly instead. (called from index at /Users/William/CS142/project4/app/controllers/users_controller.rb:3)
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from index at /Users/William/CS142/project4/app/controllers/users_controller.rb:3)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (7.4ms)
+  [1m[36mActiveRecord::SessionStore::Session Load (0.2ms)[0m  [1mSELECT "sessions".* FROM "sessions" WHERE "sessions"."session_id" = 'f68c3e5f758868de46caa90176c03b1e' ORDER BY "sessions"."id" ASC LIMIT 1[0m
+Completed 200 OK in 193ms (Views: 148.1ms | ActiveRecord: 1.1ms)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/assets/back.jpg" for 127.0.0.1 at 2014-05-13 21:51:54 -0700
+
+
+Started GET "/assets/fancyTitle.png" for 127.0.0.1 at 2014-05-13 21:51:54 -0700

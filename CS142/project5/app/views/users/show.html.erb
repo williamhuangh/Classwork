@@ -1,0 +1,23 @@
+<% content_for :head do %>
+  <%= stylesheet_link_tag "user" %>
+  <title><%= @user.first_name %> <%= @user.last_name %></title>
+<% end %>
+
+<% if flash[:notice] %>
+  <div id="notices"><%= flash[:notice] %></div>
+<% end %>
+<h1><%= @user.first_name %> <%= @user.last_name %></h1>
+<% if @user == session[:log] %>
+  <p><a href = "/photos/new">Upload Photos</a></p>
+<% end %>
+<% for p in @photos %>
+  <div><%= image_tag(p.file_name)%></div>
+  <p class = "photoInfo"><%= p.date_time %></p>
+  <% if !session[:log].nil? %>
+    <p><a href = "/photos/<%= p.id %>/comments/new">New Comment</a></p>
+  <% end %>
+  <% for c in p.comments %>
+    <p class = "commentInfo"><%= c.date_time %> <a href = "<%= c.user.id%>"><%= c.user.first_name %> <%= c.user.last_name %></a>:</p>
+    <p class = "commentInfo lastComment"><%= c.comment %></p>
+  <% end %>
+<% end %>

@@ -1,0 +1,19 @@
+<% content_for :head do %>
+  <%= stylesheet_link_tag "tags" %>
+  <title><%= @photo.user.first_name %>'s Photo</title>
+<% end %>
+<p><%= link_to "Back to Photos", user_path(@photo.user) %></p>
+<% if flash[:notice] %>
+	<p><%= flash[:notice] %></p>
+<% end %>
+<div id = "showTags"><%= image_tag(@photo.file_name)%>
+<% if !@tags.nil? %>
+	<% for tag in @tags %>
+		<% str = "left:" + tag.x_value.to_s + "px;top:" + tag.y_value.to_s + "px;width:" + tag.width.to_s + "px;height:" + tag.height.to_s + "px;"%>
+		<div class = "display_tag" style = <%= str %> ><%= tag.user.first_name%> <%= tag.user.last_name%></div>
+	<% end %>
+<% end %>
+</div>
+<% if !session[:log].nil? %>
+	<p><%= link_to "New Tag", new_photo_tag_path %></p>
+<% end %>

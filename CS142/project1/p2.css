@@ -1,0 +1,66 @@
+table{
+	font-family: Tahoma;
+	font-size: 13px;
+	white-space: nowrap;
+}
+
+a{
+	text-decoration: none;
+	color: black;
+	padding-left: 4px;
+	padding-right: 4px;
+}
+
+a:hover{
+	color: #cc6600;
+	cursor: pointer;
+}
+
+td{
+	border-bottom: solid;
+	border-color: #cccccc;
+	border-bottom-width: 1px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+}
+
+div{
+	width: 1px;
+}
+.blank{
+	width: 3px;
+}
+
+.unselected{
+	background-image: url('mid.gif');
+}
+
+.leftUnselected{
+	background-image: url('left.gif');
+}
+
+.rightUnselected{
+	background-image: url('right.gif');
+}
+
+#selected{
+	font-weight: bold;
+	background-image: url('mid-selected.gif');
+	border-bottom: none;
+}
+
+#leftSelected{
+	background-image: url('left-selected.gif');
+}
+
+#rightSelected{
+	background-image: url('right-selected.gif');
+}
+
+#beginningSpace{
+	width: 2px;
+}
+
+#restOfPage{
+	width: 100%;
+}

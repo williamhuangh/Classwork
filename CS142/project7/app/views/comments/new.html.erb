@@ -1,0 +1,15 @@
+<% content_for :head do%>
+  <title>New Comment</title>
+  <%= stylesheet_link_tag "application" %>
+<% end %>
+<% if @comment.errors.any? %>
+    <% @comment.errors.full_messages.each do |msg| %>
+      <%= msg %>
+    <% end %>
+<% end %>
+<p><%= image_tag(@photo.file_name)%></p>
+<%= form_for [@photo, @comment] do |form| %>
+  <p>Comment:</p>
+  <p><%= form.text_field :comment %></p>
+  <p><%= form.submit %></p>
+<% end %>

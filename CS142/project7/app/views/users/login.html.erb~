@@ -1,0 +1,23 @@
+<% content_for :head do%>
+  <title>Login Page</title>
+  <%= stylesheet_link_tag "application" %>
+<% end %>
+<% if session[:log].nil? %>
+  <p><a href= "/users/new">Register</a></p>
+<% end %>
+<% if !@error.nil? %>
+  <p class = "errors">Invalid Username</p>
+<% end %>
+<% if !@password.nil? %>
+  <p class = "errors">Invalid Password</p>
+<% end %>
+<% if flash.notice %>
+  <p><%= flash.notice %></p>
+<% end %>
+<%= form_tag("post_login", method: "post") do %>
+  <p><%= label_tag(:login_val, "Username:") %></p>
+  <%= text_field_tag(:login_val) %>
+  <p><%= label_tag(:passwordAttempt, "Password:") %></p>
+  <%= text_field_tag(:passwordAttempt) %>
+  <p><%= submit_tag("Log in") %></p>
+<% end %>

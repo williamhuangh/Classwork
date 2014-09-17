@@ -1,0 +1,17 @@
+<% content_for :head do %>
+  <%= stylesheet_link_tag "user" %>
+  <%= javascript_include_tag "ajax_handler" %>
+  <title>People On The Web</title>
+<% end %>
+
+<h1>People On The Web</h1>
+<form>
+	Search: <input type ="text" name = "search" id = "search_str" onkeyup = "new_request('search_str');"/><br/>
+</form>
+<% for user in @users %>
+  <div class = "button"><%= link_to user.first_name + " " + user.last_name, user_path(user) %></div>
+<% end %>
+<div id = "search_photos"></div>
+<script type="text/javascript">
+	//new_request();
+</script>

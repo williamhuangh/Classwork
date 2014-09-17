@@ -1,0 +1,16 @@
+<% content_for :head do %>
+  <title>Project 3, Problem 1</title>
+  <%= stylesheet_link_tag "state" %>
+<% end %>
+
+<ul>
+  <li>substring filter: <%= @substr %></li>
+  <% if @statesArray != nil %>
+    <% @statesArray.each do |name| %>
+      <li><%= name %></li>
+    <% end %>
+    <% if @statesArray.empty? == true %>
+      <li>No states contain this substring.</li>
+    <% end %>
+  <% end %>
+</ul>

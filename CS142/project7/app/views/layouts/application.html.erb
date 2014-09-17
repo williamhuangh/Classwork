@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+lang="en">
+<head>
+  <%= yield :head %>
+  <%= stylesheet_link_tag "application", media: "all"%>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <div class = "personalHeader"><div class = "noteDiv">Spring 2013-2014</div><%= image_tag("fancyT\
+itle.png")%></div>
+  <% if !session[:log].nil? %>
+    <p>Hi <%= session[:log].first_name %>! <a href = "/users/logout">Logout</a></p>
+  <% else %>
+    <p><a href = "/users/login">Login</a></p>
+  <% end %>
+  <%= yield %>
+</body>
+</html>

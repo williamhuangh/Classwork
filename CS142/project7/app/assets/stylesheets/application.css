@@ -1,0 +1,35 @@
+.personalHeader{
+    position: relative;
+    text-align: center;
+    width: 100%;
+    height: 50px;
+    padding-top: 10px;
+    padding-bottom: 50px;
+    margin-bottom: 10px;
+    background-image: url('back.jpg');
+    background-repeat: no-repeat;
+}
+
+.personalHeader:hover{
+    background-image: url('back2.jpg');
+    background-repeat: initial;
+}
+
+.noteDiv{
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    color: blue;
+    text-wrap: none;
+    width: 50%;
+    text-align: left;
+}
+
+.field_with_errors{
+    background-color: red;
+    font-style: bold;
+}
+
+.errors{
+    color: red;
+}

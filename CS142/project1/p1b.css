@@ -1,0 +1,75 @@
+table{
+	font-family: Tahoma;
+	font-size: 13px;
+	white-space: nowrap;
+	border: solid;
+	border-color: #d0d0ff;
+	border-width: 10px;
+	margin: 20px;
+	margin-top: 22px;
+	padding: 20px;
+	padding-bottom: 16px;
+}
+
+th{
+	font-weight: bold;
+	text-align: left;
+	padding-top: 2px;
+	padding-bottom: 2.5px;
+	border-bottom: solid;
+	border-width: 1px;
+	border-color: white;
+}
+
+td{
+	padding-top: 1.5px;
+	padding-bottom: 2px;
+	border-bottom: solid;
+	border-width: 1px;
+	border-color: white;
+}
+
+.blankSpace{
+	height: 1px;
+}
+
+.quantities{
+	text-align: center;
+}
+
+.itemsCol{
+	padding-left: 0px;
+	padding-right: 9px;
+}
+
+.manufacturerCol{
+	padding-right: 9px;
+}
+
+.sizeCol{
+	padding-right: 9px;
+}
+
+.unitPriceCol{
+	padding-right: 9px;
+}
+
+.quantityCol{
+	padding-right: 9px;
+}
+
+.totalPriceCol{
+	padding-right: 10px;
+}
+
+.lastRow{
+	padding-top: 5px;
+	padding-bottom: 4px;
+	font-weight: bold;
+	border-top: solid;
+	border-width: 2px;
+}
+
+.beforeTotal{
+	padding-bottom: 1px;
+}

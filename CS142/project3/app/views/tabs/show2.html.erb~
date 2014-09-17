@@ -1,0 +1,7 @@
+<% content_for :head do%>
+<title>Project 3, Problem 3</title>
+<% end %>
+
+<%= render :partial => "tabs", :locals =>{:tabs =>[{:label => "Inventory",:url => "inventory"}, {:label => "Order Information",:url => "order information"}, {:label => "Accounts",:url => "accounts"}, {:label => "Shippers",:url => "shippers"}, {:label => "Suppliers",:url => "suppliers"}], :str =>"Accounts"} %>
+<div id = "splitter"></div>
+<%= render :partial => "tabs", :locals =>{:tabs =>[{:label => "William",:url => "william"}, {:label => "Amy",:url => "amy"}, {:label => "Claire",:url => "claire"}, {:label => "Allen",:url => "allen"}, {:label => "Kevin",:url => "kevin"}, {:label => "Eunice",:url => "eunice"}], :str =>"Claire"} %>

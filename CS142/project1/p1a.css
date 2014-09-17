@@ -1,0 +1,70 @@
+table{
+	font-family: Tahoma;
+	font-size: 13px;
+	white-space: nowrap;
+}
+
+td{
+	padding-top: 2px;
+	padding-bottom: 2px;
+	border-bottom: solid;
+	border-width: 1px;
+	border-color: white;
+}
+
+th{
+	background-color: #687291;
+	font-weight: bold;
+	color: white;
+	text-align: left;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	border-bottom: solid;
+	border-width: 1px;
+	border-color: white;
+}
+
+.oddRow{
+	background-color: #dfe1e7;
+}
+
+.evenRow{
+	background-color: #eeeff2;
+}
+
+.quantities{
+	text-align: center;
+}
+
+.itemsCol{
+	padding-left: 10px;
+	padding-right: 19px;
+}
+
+.manufacturerCol{
+	padding-right: 19px;
+}
+
+.sizeCol{
+	padding-right: 19px;
+}
+
+.unitPriceCol{
+	padding-right: 19px;
+}
+
+.quantityCol{
+	padding-right: 19px;
+}
+
+.totalPriceCol{
+	padding-right: 10px;
+}
+
+.lastRow{
+	display: none;
+}
+
+#rule{
+	display: none;
+}

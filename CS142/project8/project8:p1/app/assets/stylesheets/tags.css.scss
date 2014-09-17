@@ -1,0 +1,29 @@
+.display_tag{
+	position: absolute;
+	border-width: 2px;
+	border-color: blue;
+	border-style: solid;
+	color: transparent;
+	text-align: center;
+}
+
+.display_tag:hover{
+	color: white;
+}
+
+#i1{
+	position: relative;
+	display: inline-block;
+}
+
+#d1{
+	position: absolute;
+	border-width: 2px;
+	border-style: solid;
+	border-color: blue;
+}
+
+#showTags{
+	position: relative;
+	display: inline-block;
+}

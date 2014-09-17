@@ -1,0 +1,10 @@
+class AddLogin < ActiveRecord::Migration
+  def change
+    add_column :users, :login, :string
+    User.reset_column_information
+    for user in User.all
+      user.login = user.last_name.downcase
+      user.save
+    end
+  end
+end

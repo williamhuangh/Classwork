@@ -1,0 +1,9 @@
+<% content_for :head do%>
+  <title>Upload Photo</title>
+  <%= stylesheet_link_tag "application" %>
+<% end %>
+<%= form_for(@photo) do |form| %>
+  <p>File Upload</p>
+  <p><%= form.file_field(:uploadedPhoto) %></p>
+  <p><%= form.submit %></p>
+<% end %>

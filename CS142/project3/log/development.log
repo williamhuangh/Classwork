@@ -1,0 +1,71 @@
+
+
+Started GET "/state/filter?substring=ha" for 127.0.0.1 at 2014-04-24 17:21:49 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StateController#filter as HTML
+  Parameters: {"substring"=>"ha"}
+  Rendered state/filter.html.erb within layouts/application (11.9ms)
+  [1m[35mActiveRecord::SessionStore::Session Load (0.2ms)[0m  SELECT "sessions".* FROM "sessions" WHERE "sessions"."session_id" = '1505061fd78b9203523d428e358e26c0' ORDER BY "sessions"."id" ASC LIMIT 1
+Completed 200 OK in 41ms (Views: 39.2ms | ActiveRecord: 0.5ms)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.6ms)[0m  INSERT INTO "sessions" ("created_at", "data", "session_id", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Fri, 25 Apr 2014 00:21:49 UTC +00:00], ["data", "BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFwK1JrR3hrbC9FSmcyYlUrOWhr\ndlVpZHRVUmZ4dGJRTTI1UUFacnUza2M4PQY7AEY=\n"], ["session_id", "a61b37f7bd17b08280e6221889e9e0a0"], ["updated_at", Fri, 25 Apr 2014 00:21:49 UTC +00:00]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-24 17:21:49 -0700
+
+
+Started GET "/assets/state.css?body=1" for 127.0.0.1 at 2014-04-24 17:21:49 -0700
+
+
+Started GET "/assets/fancyTitle.png" for 127.0.0.1 at 2014-04-24 17:21:49 -0700
+
+
+Started GET "/assets/back.jpg" for 127.0.0.1 at 2014-04-24 17:21:49 -0700
+
+
+Started GET "/assets/back2.jpg" for 127.0.0.1 at 2014-04-24 17:21:50 -0700
+
+
+Started GET "/tabs/show2" for 127.0.0.1 at 2014-04-24 17:21:55 -0700
+Processing by TabsController#show2 as HTML
+  Rendered tabs/_tabs.html.erb (0.5ms)
+  Rendered tabs/_tabs.html.erb (0.1ms)
+  Rendered tabs/show2.html.erb within layouts/application (20.8ms)
+  [1m[35mActiveRecord::SessionStore::Session Load (0.4ms)[0m  SELECT "sessions".* FROM "sessions" WHERE "sessions"."session_id" = 'a61b37f7bd17b08280e6221889e9e0a0' ORDER BY "sessions"."id" ASC LIMIT 1
+Completed 200 OK in 28ms (Views: 26.6ms | ActiveRecord: 0.4ms)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+
+
+Started GET "/assets/tabs.css?body=1" for 127.0.0.1 at 2014-04-24 17:21:55 -0700
+
+
+Started GET "/assets/fancyTitle.png" for 127.0.0.1 at 2014-04-24 17:21:55 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-24 17:21:55 -0700
+
+
+Started GET "/assets/back.jpg" for 127.0.0.1 at 2014-04-24 17:21:55 -0700
+
+
+Started GET "/assets/left.gif" for 127.0.0.1 at 2014-04-24 17:21:55 -0700
+
+
+Started GET "/assets/left-selected.gif" for 127.0.0.1 at 2014-04-24 17:21:55 -0700
+
+
+Started GET "/assets/mid-selected.gif" for 127.0.0.1 at 2014-04-24 17:21:55 -0700
+
+
+Started GET "/assets/right.gif" for 127.0.0.1 at 2014-04-24 17:21:55 -0700
+
+
+Started GET "/assets/right-selected.gif" for 127.0.0.1 at 2014-04-24 17:21:55 -0700
+
+
+Started GET "/assets/mid.gif" for 127.0.0.1 at 2014-04-24 17:21:55 -0700
+
+
+Started GET "/assets/back2.jpg" for 127.0.0.1 at 2014-04-24 17:21:56 -0700
