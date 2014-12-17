@@ -14,3 +14,5 @@ CS106L - C++ Standard Libraries (C++)
 CS142 - Web Applications (XHTML, CSS, JavaScript, Ruby, Rails)
 
 CS107 - Computer Systems and Organization (C)
+
+CS42 - Contemporary JavaScript
